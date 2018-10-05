@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extCSS %}
+    <link rel="stylesheet" href="{% static 'css/base_main.css' %}">
+{% endblock %}
+
+{% block header %}
+    <header></header>
+{% endblock %}
+
+{% block footer %}
+    <footer>      # footer也是H5的标签
+        <a href="{% url 'App:home' %}" class="home">   # 增加反向解析跳转,通过css文件观察需要添加class='home'属性
+            <dl>                        # dl是自定义列表
+                <dt><span></span></dt>  # dt是标题
+                <dd>首页</dd>           # dd是说明
+            </dl>
+        </a>
+        <a href="{% url 'App:market' %}" class="market">
+            <dl>
+                <dt><span></span></dt>
+                <dd>闪购</dd>
+            </dl>
+        </a>
+        <a href="{% url 'App:cart' %}" class="cart">
+            <dl>
+                <dt><span></span></dt>
+                <dd>购物车</dd>
+            </dl>
+        </a>
+        <a href="{% url 'App:mine' %}" class="mine">
+            <dl>
+                <dt><span></span></dt>
+                <dd>我的</dd>
+            </dl>
+        </a>
+    </footer>
+{% endblock %}

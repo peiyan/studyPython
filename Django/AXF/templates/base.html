@@ -1,0 +1,42 @@
+{% load static %}    # 使用static里面的静态文件,即使是base.html也需要
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> # 响应式布局
+
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">  # 先导样式重置
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"> # 再导入bootscript.css样式
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}"> # 再导swiper.css样式,swiper是一非常强大的触碰滑动插件
+
+    {% block extCSS %}   # 给后续需要扩展页面css挖个坑
+    {% endblock %}
+
+
+    <script src="{% static 'js/base.js' %}"></script>
+
+
+    <title>{% block title %}axf{% endblock %}</title>  # 先统一写好标题
+</head>
+<body>
+
+    {% block header %}  # 分成三部分,header头部
+    {% endblock %}
+
+    {% block content %}   # 二部分,content内容
+    {% endblock %}
+
+    {% block footer %}   # 三部分,footer底部
+    {% endblock %}
+
+
+    <script src="{% static 'js/jquery.js' %}"></script>  # 导入js的文件,先导jq
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/swiper.jquery.js' %}"></script>
+    <script src="{% static 'js/base.js' %}"></script>
+
+    {% block extJS %}  # 给后续需要扩展页面js挖个坑
+    {% endblock %}
+
+</body>
+</html>
