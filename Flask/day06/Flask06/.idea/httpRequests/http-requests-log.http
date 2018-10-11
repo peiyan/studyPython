@@ -1,0 +1,16 @@
+GET http://localhost:5000/api/v1/user/?userid=1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-06T073127.200.json
+
+###
+
+GET http://localhost:5000/api/v1/user/?userid=3
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-08-06T073109.200.json
+
+###
+

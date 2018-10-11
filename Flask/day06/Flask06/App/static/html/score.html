@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩</title>
+    <script src="/static/js/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            // 获取数据
+            $.getJSON('/getscore/', function (response) {
+                if (response['status'] == 200){     // 数据获取成功
+                    var dataSource = response['data']
+
+                    // DOM操作
+                    var $ul = $('.scorelist');
+
+                    for (var i=0; i<dataSource.length; i++){
+                        var $li = $('<li></li>').html('学生成功：' + dataSource[i])
+                        $ul.append($li)
+                    }
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+
+<ul class="scorelist">
+
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>商品列表</title>
+</head>
+<body>
+
+{% for item in goods %}
+    <div>
+        <img src="{{ item.g_img }}" alt="" width="40" height="40">
+        商品序号: {{ item.id }}
+        商品名称: {{ item.g_name }}
+        商品价格: {{ item.g_price }}
+    </div>
+{% endfor %}
+
+
+</body>
+</html>

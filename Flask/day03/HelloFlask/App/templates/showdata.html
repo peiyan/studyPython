@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示数据</title>
+</head>
+<body>
+
+{% for person in persons %}
+    <p>
+        {{ person.id }}-{{ person.p_name }}-{{ person.p_age }}
+    </p>
+{% endfor %}
+
+
+</body>
+</html>

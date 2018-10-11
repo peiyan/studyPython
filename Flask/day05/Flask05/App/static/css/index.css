@@ -1,0 +1,16 @@
+.navbar{
+    margin-bottom: 0;
+}
+
+.footer{
+    height: 200px;
+    line-height: 200px;
+    background: black;
+    color: gray;
+}
+
+.goods{
+    border: 1px solid gray;
+    padding: 10px;
+    margin: 10px;
+}

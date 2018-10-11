@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示学生信息</title>
+</head>
+<body>
+
+{% for student in students %}
+
+    <div style="border: 1px solid gray">
+        <p> {{ student.id }}-{{ student.s_name }}  班级: {{ student.s_grade }} </p>
+        <p>
+            {{ student.s_detail }}
+        </p>
+    </div>
+
+{% endfor %}
+
+
+</body>
+</html>
